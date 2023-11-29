@@ -8,6 +8,11 @@ This iOS app allows users to draw digits on the screen and predict the digit usi
 - **Drawing Canvas:** Allows users to draw digits on the screen using touch gestures.
 - **CoreML Prediction:** Utilizes a pre-trained CoreML model to predict the drawn digit and also give a probability match.
 - **Predefined Images:** Provides options to load predefined images for quick testing.
+  
+## Screenshots
+<img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/home.png" width="20%" alt="Home-Page">
+<img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/canva.png" width="20%" alt="Canva-Page">
+<img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/recog.png" width="20%" alt="Recog-Page">
 
 ### Prerequisites
 
