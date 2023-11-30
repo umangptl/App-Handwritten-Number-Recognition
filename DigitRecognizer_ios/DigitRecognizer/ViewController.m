@@ -93,6 +93,25 @@
     VNCoreMLRequest *request = [[VNCoreMLRequest alloc] initWithModel: vnc_core_ml_model completionHandler: (VNRequestCompletionHandler) ^(VNRequest *request, NSError *error){
         NSArray *results = [request.results copy];
         
+        // Find the observation with the highest confidence
+        VNClassificationObservation *highestConfidenceObservation = results.firstObject;
+        for (VNClassificationObservation *observation in results) {
+            if (observation.confidence > highestConfidenceObservation.confidence) {
+                highestConfidenceObservation = observation;
+            }
+        }
+        
+        // Print the highest probability number
+        NSString *highestProbabilityString = [NSString stringWithFormat:@"Highest Probability Digit: %@, Probability: %f\n", highestConfidenceObservation.identifier, highestConfidenceObservation.confidence];
+        NSLog(@"%@", highestProbabilityString);
+        
+        // Print the entire array in a table
+        NSLog(@"Complete Results:");
+        for (VNClassificationObservation *observation in results) {
+            NSLog(@"Digit: %@, Probability: %f", observation.identifier, observation.confidence);
+        }
+        
+        // Update the result label on the main thread
         NSMutableString *resultString = [NSMutableString string];
         for (VNClassificationObservation *res in results) {
             [resultString appendFormat:@"Digit: %@, Probability: %f\n", res.identifier, res.confidence];
@@ -102,6 +121,8 @@
             self.resultLabel.text = resultString;
         });
     }];
+
+    
     
     NSDictionary *options_dict = [[NSDictionary alloc] init];
     NSArray *request_array = @[request];
