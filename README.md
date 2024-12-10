@@ -10,9 +10,11 @@ This iOS app allows users to draw digits on the screen and predict the digit usi
 - **Predefined Images:** Provides options to load predefined images for quick testing.
   
 ## Screenshots
-<img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/home.png" width="20%" alt="Home-Page">
-<img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/canva.png" width="20%" alt="Canva-Page">
-<img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/recog.png" width="20%" alt="Recog-Page">
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+  <img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/home.png" width="20%" alt="Home-Page">
+  <img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/canva.png" width="20%" alt="Canva-Page">
+  <img src="https://github.com/umangptl/App-Handwritten-Number-Recognition/blob/main/Images/recog.png" width="20%" alt="Recog-Page">
+</div>
 
 ### Prerequisites
 
